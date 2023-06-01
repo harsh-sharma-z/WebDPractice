@@ -57,11 +57,37 @@
 // console.log(boldPapa);
 // console.log(boldPapa.children);
 
-const newImg=document.createElement('img');
-newImg.src="https://images.freeimages.com/images/previews/ac9/railway-hdr-1361893.jpg";
-document.body.appendChild(newImg);
-newImg.classList.add('square');
+// const newImg=document.createElement('img');
+// newImg.src="https://images.freeimages.com/images/previews/ac9/railway-hdr-1361893.jpg";
+// document.body.appendChild(newImg);
+// newImg.classList.add('square');
 
-const newH3=document.createElement('h3');
-newH3.innerText="I am new";
-document.body.appendChild(newH3);
+// const newH3=document.createElement('h3');
+// newH3.innerText="I am new";
+// document.body.appendChild(newH3);
+
+// const newB=document.createElement('b');
+// newB.innerText="I am bold";
+// const p=document.querySelector('p');
+// p.prepend(newB);
+
+
+// const h2=document.createElement('h2');
+// h2.innerText="New chicken heading";
+// const h1=document.querySelector('h1');
+// h1.insertAdjacentElement('afterend',h2);
+
+// const h3=document.createElement('h3');
+// h3.innerText="I am new H3";
+// h1.after(h3);
+
+
+
+// const firstLi=document.querySelector('li');
+// const parent = firstLi.parentElement;
+// parent.removeChild(firstLi); 
+// //or
+// firstLi.parentElement.removeChild(firstLi);
+//or
+// const img=document.querySelector('img');
+// img.remove();
