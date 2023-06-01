@@ -1,0 +1,27 @@
+h1{
+    font-family: 'Rubik Pixels', cursive;
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2{
+    font-family: 'Chivo Mono', monospace;
+    font-weight: bold;
+    margin:10px auto;
+}
+
+h3{
+    font-family: 'Chivo Mono', monospace;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+p{
+    font-family: 'Crimson Text', serif;
+    
+}

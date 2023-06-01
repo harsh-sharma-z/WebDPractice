@@ -1,0 +1,65 @@
+h1 {
+  background-color: #a2d2ff;
+}
+p {
+  height: 200px;
+  width: 400px;
+  padding: 0;
+}
+#one {
+  background-color: #ffafcc;
+  border: #001219 solid 4px;
+}
+
+#two {
+  background-color: #ffc8dd;
+  border: #005f73 dashed 4px;
+}
+#three {
+  background-color: #cdb4db;
+  border: #0a9396 inset 4px;
+}
+
+section {
+  background-color: #355070;
+  border: #eaac8b solid 1px;
+  width: 500px;
+  height: 500px;
+}
+
+span {
+  height: 60%;
+  width: 60%;
+  margin: 20%;
+  background-color:white;
+  border: #06d6a0 solid 2px;
+ 
+}
+
+#shape {
+  width: 400px;
+  height: 200px;
+
+  background: linear-gradient(90deg, #220ed6, #d80d0d);
+  rotate: 25deg;
+  --mask:
+    radial-gradient(34.99px at 50% 48.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.99px at 50% -18px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+
+
+          border-bottom-right-radius: 100%;
+}
+
+#tri {
+  width: 400px;
+  height: 200px;
+  rotate: -25deg;
+  background: #005f73;
+  --mask:
+    radial-gradient(34.99px at 50% calc(100% - 48.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.99px at 50% calc(100% + 18.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}

@@ -1,0 +1,72 @@
+h1{
+    background-color: #219ebc;
+    color: #f1faee;
+    border:2px solid #023047;
+    margin: 20px auto;
+    height: 30px;
+    width: 200px;
+    padding: 0.7em;
+    font-weight: 1.4em;
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+h1:nth-of-type(2n)
+{
+    background-color: #a8dadc;
+}
+h1:nth-of-type(3n)
+{
+    background-color: #a8dadc
+}
+h1:nth-of-type(4n)
+{
+    background-color: #dda15e 
+}
+
+section:first-of-type h1:nth-of-type(1)
+{
+    transform-origin: top right;
+    transform: rotate(30deg);
+}
+
+section:first-of-type h1:nth-of-type(2)
+{
+    transform: scale(0.8);
+}
+
+section:first-of-type h1:nth-of-type(3)
+{
+    transform: translateX(220px);
+}
+
+section:first-of-type h1:nth-of-type(4)
+{
+    transform: translate(-100px ,50px);
+}
+
+section:nth-of-type(2) h1:nth-of-type(1)
+{
+    transform: skew(30deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(2)
+{
+    transform: skew(10deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(3)
+{
+    transform: rotate(30deg)  scale(1.5);
+
+}
+
+section:nth-of-type(2) h1:nth-of-type(3)
+{
+    transform: rotate(90deg) translateY(-100px)  scaleY(1.5);
+
+}
+
+
