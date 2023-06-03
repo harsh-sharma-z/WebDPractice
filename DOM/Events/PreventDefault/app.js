@@ -8,3 +8,15 @@ form.addEventListener('submit',function(e){
     list.appendChild(newLi);
     name.value='';
 });
+// const lis=document.querySelectorAll('li');
+// for(let li of lis){
+//     li.addEventListener('click',function(){
+//         this.remove();
+//     });
+// }
+
+//event delegation
+list.addEventListener('click',function(e){
+    console.log("Click on UL"  )    ;
+    e.target.nodeName==='LI' && e.target.remove();
+});
