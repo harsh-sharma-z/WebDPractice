@@ -176,27 +176,41 @@
 //     return `${firstName} ${lastName} ${born}`;
 // }
 
-movies=[
-    {
-        title:"Naruto",
-        score:5,
-        year:2002
-    },
-    {
-        title:"Boruto",
-        score:4,
-        year:2017
-    },
-    {
-        title:"One Piece",
-        score:5,
-        year:1999
-    },
-    {
-        title:"Death Note",
-        score:4,
-        year:2006
-    }
-]
+// movies=[
+//     {
+//         title:"Naruto",
+//         score:5,
+//         year:2002
+//     },
+//     {
+//         title:"Boruto",
+//         score:4,
+//         year:2017
+//     },
+//     {
+//         title:"One Piece",
+//         score:5,
+//         year:1999
+//     },
+//     {
+//         title:"Death Note",
+//         score:4,
+//         year:2006
+//     }
+// ]
 
-movies.map(({title,score,year})=>console.log(`${title} - ${score} - ${year}`));
+// movies.map(({title,score,year})=>console.log(`${title} - ${score} - ${year}`));
+
+
+// const votes=['y','y','n','n','y','n','y'];
+// const tally=votes.reduce((tally,votes)=>
+// {
+//     tally[votes]=(tally[votes]||0)+1;
+//     return tally;
+// },{});
+
+
+// const  nums=[1,2,3,4,5,6,7,8];
+// const odds=nums.filter(n=>{
+//     return n%2===1;
+// });
