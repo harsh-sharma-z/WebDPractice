@@ -66,22 +66,37 @@ const fakeRequestPromises = (url) => {
 //         console.log("It didn't worked :(");
 //     })
 
-fakeRequestPromises("google.com")
-.then((data) => {
-    console.log("It worked for page 1");
-    console.log(data);
-    return fakeRequestPromises("google.com/page2");
-})
-.then((data)=>{
-    console.log("It worked for the page 2");
-    console.log(data);
-    return fakeRequestPromises("google.com/page3");
-})
-.then((data)=>{
-    console.log("It worked for page 3");
-    console.log(data);
-})
-.catch((err)=>{
-    console.log("One request failed :(")
-    console.log(err);
-})
+// fakeRequestPromises("google.com")
+// .then((data) => {
+//     console.log("It worked for page 1");
+//     console.log(data);
+//     return fakeRequestPromises("google.com/page2");
+// })
+// .then((data)=>{
+//     console.log("It worked for the page 2");
+//     console.log(data);
+//     return fakeRequestPromises("google.com/page3");
+// })
+// .then((data)=>{
+//     console.log("It worked for page 3");
+//     console.log(data);
+// })
+// .catch((err)=>{
+//     console.log("One request failed :(")
+//     console.log(err);
+// })
+
+
+async function maketwoRequests(){
+  try{
+    let data1= await fakeRequestPromises('page1');
+    console.log(data1);
+    let data2= await fakeRequestPromises('page2');
+    console.log(data2);
+  }
+  catch(e)
+  {
+    console.log("Caught an error");
+    console.log("Error is:",e);
+  }
+}
