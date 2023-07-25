@@ -33,6 +33,6 @@ app.get('/rand' , (req , res) =>{
     res.render("random" , {randNum : num});
 });
 
-app.listen(7000 , () =>{
-    console.log("Listening on port 7000");
+app.listen(5000 , () =>{
+    console.log("Listening on port 5000");
 })

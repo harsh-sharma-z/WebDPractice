@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar') %>
+
+    <!-- This is to embedd (with '=' sign)-->
+    <h1>You random number is : <%= randNum%></h1> 
+
+    <!-- This is to control flow (without '=' sign) -->
+    <%if(randNum%2 === 0){ %>
+        <h1>It is even!</h1>
+    <% } else {%>
+        <h1>It is odd!</h1>
+    <%} %>
+
+    <h3><%= randNum%2 === 0 ? "EVEN" : "ODD" %> </h3>
+
+
+    <%- include('partials/footer') %>

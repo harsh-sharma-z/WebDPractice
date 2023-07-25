@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= name %></title>
-    <link rel="stylesheet" , href="/app.css">
-</head>
+<%- include('partials/head') %>
 <body>
+    <%- include('partials/navbar') %>
+    <div class="container">
     <h1>You are on the '<%= name %>' subreddit</h1>
     <h4><%= description %></h4>
     <p>Subcriber: <%= subscribers %></p>
@@ -21,6 +16,6 @@
             <% } %>
         </article>
     <% } %>
-    
-</body>
-</html>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,12 @@
+<%- include('partials/head') %>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <h1>Team 7 characters</h1>
+    <ul>
+      <% for(let ch of narutosCharacters) { %>
+      <li><%= ch %></li>
+      <% } %>
+    </ul>
+
+    <%- include('partials/footer') %>
