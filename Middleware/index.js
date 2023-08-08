@@ -10,6 +10,18 @@ app.use((req , res , next) =>{
     next();
 })
 
+app.use('/dogs' , (req , res , next) =>{
+    console.log("I like dogs");
+    next();
+})
+
+const verifyPassword = (req , res , next) =>{
+    const {password} = req.query;
+    if(password === 'harsh'){
+        next();
+    }
+    res.send('You need a password')
+}
 
 // app.use((req , res , next) =>{
 //     console.log("This is my first middleware!!")
@@ -22,15 +34,24 @@ app.use((req , res , next) =>{
 //     next();
 // })
 
+app.get('/secret'  , verifyPassword ,  (req , res) =>{
+    res.send("I have no enemies🕊️")
+}) 
 
 app.get('/' , (req , res) =>{
-    console.log(`Date: ${req.requestTime()}`)
+    console.log(`Date: ${req.requestTime}`)
     res.send("HOME PAGE MIDDLEWARE")
 })
 
 app.get('/dogs' , (req , res) =>{
     res.send("WOOF WOOF")
 })
+
+app.use((req , res) =>{
+    res.status(404).send("Not found :(")
+})
+
+
 
 app.listen(5000 , ()=>{
     console.log("Connection up at PORT 5000! 🚀")
