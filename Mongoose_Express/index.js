@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const Farm = require('./models/farm');
 const Product = require('./models/product');
 const methodOverride = require('method-override')
 // import express from "express";
@@ -9,7 +10,7 @@ const methodOverride = require('method-override')
 const app = express();
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/farmStand' , {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://127.0.0.1:27017/farmStandTake2' , {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
     console.log('Connection Open !')
 })
@@ -23,6 +24,31 @@ app.set('view engine' , 'ejs');
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 
+//FARM ROUTES
+
+app.get('/farms' , async (req , res) => {
+    const farms = await Farm.find({});
+    res.render('farms/index' , {farms})
+})
+
+app.get('/farms/new' , (req , res) =>{
+     res.render('farms/new')
+})
+
+app.get('/farms/:id' , async(req , res) =>{
+    const farm = await Farm.findById(req.params.id);
+    res.render('farms/show' , {farm})
+})
+app.post('/farms' , async (req , res) =>{
+    const farm = new Farm(req.body);
+    await farm.save();
+})
+
+app.get('/farms/:id/products/new' , (req , res) =>{
+    res.render('products/new')
+})
+
+//PRODUCT ROUTES
 const categories = ['fruit' , 'vegetable' , 'dairy' , 'fungi'];
 
 app.get('/products' , async(req , res) =>{
