@@ -16,7 +16,8 @@ const productSchema = new Schema({
         enum: ['fruit', 'vegetable', 'dairy' , 'fungi']
     },
     farm:{
-        type : Schema.Types.ObjectId
+        type : Schema.Types.ObjectId,
+        ref: 'Farm'
     }
 });
 
